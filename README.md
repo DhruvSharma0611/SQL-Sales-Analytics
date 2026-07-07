@@ -102,22 +102,15 @@ Sales-Data-Warehouse-Analytics/
 **Steps:**
 
 1. Clone this repository:
-```bash
-git clone https://github.com/DhruvSharma0611/Sales-Data-Warehouse-Analytics.git
-```
+git clone https://github.com/DhruvSharma0611/SQL-Sales-Analytics.git
 
 2. Open `00_init_database.sql` in SSMS
 
-3. Update the three CSV file paths in the `BULK INSERT` blocks to match your local machine:
-```sql
--- Change this line in 00_init_database.sql:
-FROM 'C:\sql\datasets\csv-files\gold.dim_customers.csv'
+3. Update the three CSV file paths to match where you cloned the repo:
+-- Example:
+FROM 'C:\Users\YourName\SQL-Sales-Analytics\data\gold.dim_customers.csv'
 
--- To wherever your CSV files are saved, for example:
-FROM 'C:\Users\YourName\Downloads\data\gold.dim_customers.csv'
-```
-
-4. Run `00_init_database.sql` — this creates the database and loads all data
+4. Run `00_init_database.sql` — creates the database and loads all data
 
 5. Run scripts `01` through `13` in order
 
