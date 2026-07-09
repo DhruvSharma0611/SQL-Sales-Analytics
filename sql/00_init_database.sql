@@ -16,9 +16,14 @@
 --   DataWarehouseAnalytics database. Make sure you have a
 --   backup before proceeding.
 --
--- NOTE:
+-- ⚠️ BEFORE RUNNING:
 --   Update the three file paths in the BULK INSERT blocks
---   below to match the location of your CSV files.
+--   below to match where you cloned this repo on your machine.
+--
+--   Example:
+--   If you cloned to C:\Users\John\SQL-Sales-Analytics
+--   then your path should be:
+--   C:\Users\John\SQL-Sales-Analytics\data\gold.dim_customers.csv
 -- ============================================================
 
 USE master;
@@ -105,15 +110,16 @@ GO
 
 -- ============================================================
 -- Load Data: gold.dim_customers
--- UPDATE the path below to match your local CSV location
+-- ⚠️ UPDATE THIS PATH to where you cloned this repo
+-- Example: C:\Users\YourName\SQL-Sales-Analytics\data\gold.dim_customers.csv
 -- ============================================================
 TRUNCATE TABLE gold.dim_customers;
 GO
 
 BULK INSERT gold.dim_customers
-FROM 'C:\sql\datasets\csv-files\gold.dim_customers.csv'
+FROM 'C:\YOUR-PATH-HERE\SQL-Sales-Analytics\data\gold.dim_customers.csv'
 WITH (
-    FIRSTROW       = 2,
+    FIRSTROW        = 2,
     FIELDTERMINATOR = ',',
     TABLOCK
 );
@@ -123,14 +129,16 @@ GO
 
 -- ============================================================
 -- Load Data: gold.dim_products
+-- ⚠️ UPDATE THIS PATH to where you cloned this repo
+-- Example: C:\Users\YourName\SQL-Sales-Analytics\data\gold.dim_products.csv
 -- ============================================================
 TRUNCATE TABLE gold.dim_products;
 GO
 
 BULK INSERT gold.dim_products
-FROM 'C:\sql\datasets\csv-files\gold.dim_products.csv'
+FROM 'C:\YOUR-PATH-HERE\SQL-Sales-Analytics\data\gold.dim_products.csv'
 WITH (
-    FIRSTROW       = 2,
+    FIRSTROW        = 2,
     FIELDTERMINATOR = ',',
     TABLOCK
 );
@@ -140,14 +148,16 @@ GO
 
 -- ============================================================
 -- Load Data: gold.fact_sales
+-- ⚠️ UPDATE THIS PATH to where you cloned this repo
+-- Example: C:\Users\YourName\SQL-Sales-Analytics\data\gold.fact_sales.csv
 -- ============================================================
 TRUNCATE TABLE gold.fact_sales;
 GO
 
 BULK INSERT gold.fact_sales
-FROM 'C:\sql\datasets\csv-files\gold.fact_sales.csv'
+FROM 'C:\YOUR-PATH-HERE\SQL-Sales-Analytics\data\gold.fact_sales.csv'
 WITH (
-    FIRSTROW       = 2,
+    FIRSTROW        = 2,
     FIELDTERMINATOR = ',',
     TABLOCK
 );
