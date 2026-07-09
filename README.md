@@ -19,8 +19,6 @@ The project walks through the complete analytics workflow — from setting up th
 ---
 
 ## 📂 Project structure
-
-```
 SQL-Sales-Analytics/
 │
 ├── data/
@@ -45,7 +43,6 @@ SQL-Sales-Analytics/
 │   └── 13_report_products.sql        # Product reporting view
 │
 └── README.md
-```
 
 ---
 
@@ -110,10 +107,10 @@ git clone https://github.com/DhruvSharma0611/SQL-Sales-Analytics.git
 
 3. Update the three CSV file paths in the `BULK INSERT` blocks to match where you cloned the repo on your machine:
 ```sql
--- Change this line in 00_init_database.sql:
-FROM 'C:\sql\datasets\csv-files\gold.dim_customers.csv'
+-- Change this in 00_init_database.sql:
+FROM 'C:\YOUR-PATH-HERE\SQL-Sales-Analytics\data\gold.dim_customers.csv'
 
--- To the path where you cloned this repo, for example:
+-- To your actual path, for example:
 FROM 'C:\Users\YourName\SQL-Sales-Analytics\data\gold.dim_customers.csv'
 ```
 
@@ -139,4 +136,4 @@ FROM 'C:\Users\YourName\SQL-Sales-Analytics\data\gold.dim_customers.csv'
 Aspiring Data Analyst with a focus on SQL, Business Intelligence, and Data Analytics.
 
 - 🔗 GitHub: [github.com/DhruvSharma0611](https://github.com/DhruvSharma0611)
-- 💼 LinkedIn: [linkedin.com/in/dhruv-sharma-006939289](https://www.linkedin.com/in/dhruv-sharma-006939289/)
+- 💼 LinkedIn: [linkedin.com/in/dhruv-sharma-006939289](https://www.linkedin.com/in/dhruv-sharma-006939289/) 
