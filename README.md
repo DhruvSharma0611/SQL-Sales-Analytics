@@ -19,6 +19,8 @@ The project walks through the complete analytics workflow — from setting up th
 ---
 
 ## 📂 Project structure
+
+```
 SQL-Sales-Analytics/
 │
 ├── data/
@@ -43,6 +45,7 @@ SQL-Sales-Analytics/
 │   └── 13_report_products.sql        # Product reporting view
 │
 └── README.md
+```
 
 ---
 
